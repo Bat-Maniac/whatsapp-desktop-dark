@@ -10,7 +10,6 @@ let btnGithub = document.querySelector('#btnGithub');
 let lblVersion = document.querySelector('#lblVersion');
 let lblInfo = document.querySelector('#lblInfo');
 let lnkCheckUpd = document.querySelector('#lnkCheckUpd');
-let cmbTheme = document.querySelector('#cmbTheme');
 let themes = [
     {
         "themeName": "Default",
@@ -49,17 +48,8 @@ socket.on('ask', function (data, fn) {
     fn(confirm(data));
 });
 
-socket.on('getSelectedTheme', function (fn) {
-    let selected = cmbTheme.options[cmbTheme.selectedIndex].value;
-    fn(selected);
-});
-
 socket.on('say', function (data) {
     alert(data);
-});
-
-socket.on('setThemeNames', function (data) {
-    setThemeNames(data);
 });
 
 socket.on('endInit', function (data) {
@@ -99,19 +89,6 @@ btnGithub.addEventListener('click', function () {
     window.open('https://github.com/m4heshd/whatsapp-desktop-dark', '_blank')
 });
 
-cmbTheme.addEventListener('change', function () {
-    let selected = cmbTheme.options[cmbTheme.selectedIndex].value;
-    let ovrdJSON = themes.find(x => x.themeName === selected);
-
-    document.documentElement.style.setProperty('--dark', ovrdJSON.dark);
-    document.documentElement.style.setProperty('--darker', ovrdJSON.darker);
-    document.documentElement.style.setProperty('--lighter', ovrdJSON.lighter);
-    document.documentElement.style.setProperty('--accent', ovrdJSON.accent);
-    document.documentElement.style.setProperty('--msgout', ovrdJSON.msgout);
-    document.documentElement.style.setProperty('--accent_hover', pSBC(-0.3, ovrdJSON.accent));
-    document.documentElement.style.setProperty('--border', pSBC(-0.7, ovrdJSON.lighter));
-});
-
 lnkCheckUpd.addEventListener('click', function () {
     socket.emit('checkUpd');
 });
@@ -136,19 +113,6 @@ function setOLTxt(text) {
 
 function setVersion(text) {
     lblVersion.innerHTML = text;
-}
-
-function setThemeNames(themeObject) {
-    themes = themeObject;
-    const themeNames = themeObject.map((ovrd) => ovrd.themeName);
-    document.querySelectorAll('#cmbTheme option').forEach(option => option.remove());
-    themeNames.forEach(function (theme) {
-        let opt = document.createElement('option');
-        opt.text = theme;
-        opt.value = theme;
-        cmbTheme.options.add(opt);
-    });
-    document.querySelector('#cmbTheme option[value="Default"]').selected = true;
 }
 
 function endInit(isBkAvail) {
