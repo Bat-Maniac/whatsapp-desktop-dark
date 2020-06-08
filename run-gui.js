@@ -209,7 +209,6 @@ function applyDarkStyles(procPath) {
         asar.extractAll(fullpath, extPath);
 
         setOLTxt('Injecting styles..');
-        let stylePath = path.join(__dirname, "styles", platform);
         let indexPath = path.join(extPath, "index.html");
         let rendererPath = path.join(extPath, "renderer.js");
         if (fs.existsSync(rendererPath)) {
