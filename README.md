@@ -17,7 +17,7 @@ WhatsApp Desktop Dark Mode by <a href="https://github.com/firefinchdev">firefinc
   <br>
 </h1>
 
-Stable version: [**`2.2021.4`**](https://github.com/firefinchdev/whatsapp-desktop-dark/releases/tag/2.2021.4) (Check if this version matches with your version of WhatsApp. The mod will still work even if the versions doesn't match)
+Stable version: [**`2.2023.2`**](https://github.com/firefinchdev/whatsapp-desktop-dark/releases/tag/2.2023.2) (Check if this version matches with your version of WhatsApp. The mod will still work even if the versions doesn't match)
 
 This mod is a simple tweak for [WhatsApp Desktop **Official** version](https://www.whatsapp.com/download/) to enable dark mode until it is released officially. <b>It works for Windows and macOS.</b>
 
@@ -41,8 +41,8 @@ The answer is right there on the top. **This is an open source project**. which 
 **NOTE:** *THIS IS NOT A MODDED VERSION OF WhatsApp*. WhatsApp Desktop Dark Mode is a simple set of styling that needs to be injected to the source files of your current installation of WhatsApp. I've made it much easier by creating a installation script using NodeJS and made it easier furthermore by creating simple executable files using [nexe](https://github.com/nexe/nexe). If you don't trust the executable files I've provided below, you can build and run it from the source code itself by following the instructions in the next section.
 
  - [All releases (with source)](https://github.com/firefinchdev/whatsapp-desktop-dark/releases)
- - Windows (x86 & x64) - [Download](https://github.com/firefinchdev/whatsapp-desktop-dark/releases/download/2.2021.4/WADark-2.2021.4-Windows.zip)
- - macOS (x64) - [Download](https://github.com/firefinchdev/whatsapp-desktop-dark/releases/download/2.2021.4/WADark-2.2021.4-macOS.zip)
+ - Windows (x86 & x64) - [Download](https://github.com/firefinchdev/whatsapp-desktop-dark/releases/download/2.2023.2/WADark-2.2023.2-Windows.zip)
+ - macOS (x64) - [Download](https://github.com/firefinchdev/whatsapp-desktop-dark/releases/download/2.2023.2/WADark-2.2023.2-macOS.zip)
 
 ## Installation
 
