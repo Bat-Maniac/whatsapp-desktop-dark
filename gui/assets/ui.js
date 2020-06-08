@@ -10,18 +10,6 @@ let btnGithub = document.querySelector('#btnGithub');
 let lblVersion = document.querySelector('#lblVersion');
 let lblInfo = document.querySelector('#lblInfo');
 let lnkCheckUpd = document.querySelector('#lnkCheckUpd');
-let themes = [
-    {
-        "themeName": "Default",
-        "dark": "#272c35",
-        "darker": "#1f232a",
-        "lighter": "#e9e9e9",
-        "accent": "#5792ff",
-        "msgout": "#131a25",
-        "accent_hover": "#497ad5",
-        "border": "#808080",
-    }
-];
 
 //Incoming messages
 socket.on('showOL', function (data) {
@@ -86,7 +74,7 @@ btnKofi.addEventListener('click', function () {
 });
 
 btnGithub.addEventListener('click', function () {
-    window.open('https://github.com/m4heshd/whatsapp-desktop-dark', '_blank')
+    window.open('https://github.com/firefinchdev/whatsapp-desktop-dark', '_blank')
 });
 
 lnkCheckUpd.addEventListener('click', function () {
@@ -124,7 +112,7 @@ function quit() {
     let body = document.querySelector('body');
     body.innerHTML =
         '<div id="endScrn">\n' +
-        '    <a href="https://github.com/m4heshd/whatsapp-desktop-dark" target="_blank">\n' +
+        '    <a href="https://github.com/firefinchdev/whatsapp-desktop-dark" target="_blank">\n' +
         '        <img id="endImg" src="assets/wadark_med.png" alt="Visit on GitHub" onload="socket.emit(\'endApp\')">\n' +
         '        <br>\n' +
         '        <span id="endTxt">Visit on GitHub</span>\n' +

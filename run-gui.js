@@ -15,7 +15,7 @@ let io = require('socket.io');
 let client = null;
 let version = '0';
 let started = false;
-let updURL = 'https://raw.githubusercontent.com/m4heshd/whatsapp-desktop-dark/master/package.json';
+let updURL = 'https://raw.githubusercontent.com/firefinchdev/whatsapp-desktop-dark/master/package.json';
 let bkPath = path.join(__dirname, 'backup', 'app.asar');
 let WAPath = null;
 let platform = process.platform;
@@ -230,7 +230,7 @@ function applyDarkStyles(procPath) {
                         fs.removeSync(extPath);
                         fs.removeSync(newAsar);
 
-                        say('All done. May your beautiful eyes burn no more.. Enjoy WhatsApp Dark mode!! :)');
+                        say('All done. Go to WhatsApp Desktop -> Settings -> Chats -> Themes and select Dark');
 
                         let WAPP = spawn(execPath, [], {
                             detached: true,
@@ -296,7 +296,7 @@ function restoreBackup(procPath) {
 
 function openDownload() {
     (async () => {
-        await open('https://github.com/m4heshd/whatsapp-desktop-dark/releases/latest');
+        await open('https://github.com/firefinchdev/whatsapp-desktop-dark/releases/latest');
     })();
 }
 
